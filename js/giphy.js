@@ -12,7 +12,7 @@ function createButtons(){
 		$('.display').empty();
 
 		var thisMeme = $(this).data('name');
-		var giphyURL = "http://api.giphy.com/v1/gifs/search?q=" + thisMeme + "&limit=10&api_key=dc6zaTOxFJmzC";
+		var giphyURL = "http://api.giphy.com/v1/gifs/search?q=" + thisMeme + "&limit=20&api_key=dc6zaTOxFJmzC";
 		$.ajax({url: giphyURL, method: 'GET'}).done(function(giphy){
 			current = giphy.data;
 			$.each(current, function(index,value){
